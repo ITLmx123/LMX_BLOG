@@ -1,0 +1,38 @@
+server:
+  port: 7777
+spring:
+#  main:
+#    allow-circular-references: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/lmx_blog?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  #    type: com.zaxxer.hikari.HikariDataSource
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 5MB
+  redis:
+    database: 0
+    host: 192.168.124.129
+    port: 6379
+    password: 123321
+mybatis-plus:
+#  mybatis-plus 日志设置
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-field: delFlag
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      id-type: auto
+data:
+  data-format: yyyy-MM-dd HH:mm:ss
+
+qiNiuYun:
+  accessKey: Pb371LgbY5xRWn282qVmD2HDq5YHAsqbMQ-AkHsP
+  secretKey: aJKlP7fs_0sd64JniE0HJ9g440QfX6yez4l62Vum
+  bucket: lmx-blog
+
